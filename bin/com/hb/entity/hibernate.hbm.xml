@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+ "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+ <hibernate-mapping>
+ <class name="com.hb.entity.InsurancePolicy">
+ <id name="policyId" column="POLICYID">
+ <!-- suits in all DB's -->
+ <!-- <generator class="increment"/></id> -->
+ 
+ <!-- suits in MySQL -->
+<!--  <generator class="identity"/></id> -->
+
+<!--  suits in ORACLE-->
+      <!-- <generator class="sequence" >
+       <param name="sequence_name">POLICY_SEQ</param> 
+       if we are not mention any hibernate_sequence is default
+      </generator>
+      </id> -->
+      
+     <!--   will support upto hibernate 4.x 
+      <generator class="hilo"></generator> -->
+      
+   <!-- suits in all DBS -->
+         <!-- <generator class="seqhilo">
+      <param name="sequence">POLICY_SEQ</param>
+      <param name="max_lo">5</param>
+      </generator>
+      </id> -->
+      
+       <generator class="native">
+      </generator>
+      </id>
+      
+     
+ <property name="policyName"></property>
+ <property name="tenture"> </property>
+ <property name="closingTime"></property>
+ </class>
+ </hibernate-mapping>
