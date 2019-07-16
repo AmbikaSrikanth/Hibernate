@@ -31,6 +31,7 @@ public class InsurancePolicy  implements Serializable{
 	public void setClosingTime(int closingTime) {
 		this.closingTime = closingTime;
 	}
+	//comment
 	
 
 }
