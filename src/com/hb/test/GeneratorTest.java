@@ -16,8 +16,8 @@ public class GeneratorTest {
 		int idval=0;
 		ses=HibernateUtil.getSession();
 		policy=new InsurancePolicy();
-		policy.setPolicyId(200);
-		policy.setPolicyName("saaadhar");
+		policy.setPolicyId(100);
+		policy.setPolicyName("manadi");
 		policy.setClosingTime(23);
 		policy.setTenture(24);
 		try{
@@ -33,10 +33,10 @@ public class GeneratorTest {
 			
 			if(flag){
 				tx.commit();
-			System.out.println("object is saved"+idval);
+			System.out.println("objects are saved"+idval);
 		}else{
 			tx.rollback();
-			System.out.println("object is not saved");
+			System.out.println("objects are not saved");
 		}
 		HibernateUtil.closeSession(ses);
 		HibernateUtil.closeSessionFactory();
